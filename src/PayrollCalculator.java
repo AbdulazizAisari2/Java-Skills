@@ -16,9 +16,18 @@ public class PayrollCalculator {
                     totalPay = (40 * hourlyRate) + (overtime * hourlyRate * 1.5);
                 }
                 break; 
-		}
-			
 
+			case "PART_TIME":
+				if (hoursWorked >=0 && hoursWorked <=25){
+					totalPay = hoursWorked * hourlyRate;
+				}
+				else {
+					System.out.println("Invalid! PART_TIME Hours must be between 0 and 25");
+					return 0;
+				}
+			break;
+		}
         return totalPay;
-    }
+    
+	}
 }
