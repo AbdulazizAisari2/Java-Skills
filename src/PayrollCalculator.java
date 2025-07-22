@@ -26,8 +26,12 @@ public class PayrollCalculator {
 					return 0;
 				}
 			break;
-		}
+		
+			case "CONTRACTOR":
+				totalPay = 200;
+				break;
+		}		
         return totalPay;
-    
+	
 	}
 }
