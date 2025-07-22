@@ -51,5 +51,9 @@ public class UserInfo {
 		System.out.println("Age:" + " " + age);
 		System.out.println("Email" + " " + email);
 		System.out.println("Active / Not Active:" + " " + isActive); 
+		System.out.println("--------------------------------"); 
+		System.out.println(); 
+
+
 	}
 }
