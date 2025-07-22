@@ -9,7 +9,7 @@ public class Main {
 		user2.displayInfo();
 		user3.displayInfo();
 		
-	double pay = PayrollCalculator.calculateWeeklyPay("PART_TIME", 25, 25);
+	double pay = PayrollCalculator.calculateWeeklyPay("INTERN", 20, 16);
 	System.out.println("Pay: $" + pay);
 	}
 	

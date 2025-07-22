@@ -30,8 +30,20 @@ public class PayrollCalculator {
 			case "CONTRACTOR":
 				totalPay = 200;
 				break;
-		}		
+				
+			case "INTERN":
+				if (hoursWorked >=0 && hoursWorked <=20){
+					totalPay = (hourlyRate * 0.8) * hoursWorked;
+				}
+				else{
+				System.out.println("Invalid! INTERN Hours must be between 0 and 20");
+				return 0;
+				}
+				break;
+			
+		}
         return totalPay;
+	
 	
 	}
 }
