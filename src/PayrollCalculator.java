@@ -1,0 +1,22 @@
+public class PayrollCalculator {
+    public static double calculateWeeklyPay(String employeeType, double hoursWorked, double hourlyRate) {
+        if (hoursWorked < 0 || hourlyRate < 0) {
+            System.out.println("Invalid input: Hourly rate or hours worked cannot be negative");
+            return 0;
+        }
+
+        double totalPay = 0;
+        String type = employeeType.toUpperCase();
+
+        if (type.equals("FULL_TIME")) {
+            if (hoursWorked <= 40) {
+                totalPay = hoursWorked * hourlyRate;
+            } else {
+                double overtime = hoursWorked - 40;
+                totalPay = (40 * hourlyRate) + (overtime * hourlyRate * 1.5);
+            }
+        }
+
+        return totalPay;
+    }
+}
