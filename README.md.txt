@@ -1,64 +1,18 @@
-# Java Skills Assessment – Junior Developer
+# Java Payroll System
 
-This repository contains Java-based mini projects designed to demonstrate core object-oriented programming and problem-solving skills. It includes two key tasks:
+This project demonstrates Java OOP skills through two main tasks:
 
----
+## Task 1 – UserInfo
+- Creates and displays user information using a `UserInfo` class with attributes like name, age, email, and admin status.
 
-## 🧑‍💻 Task 1: User Info with Encapsulation
+## Task 2 – PayrollCalculator
+- Calculates weekly pay for different employee types (`FULL_TIME`, `PART_TIME`, `CONTRACTOR`, `INTERN`).
+- Includes tax deduction logic based on gross salary and insurance status.
 
-A basic encapsulated class `UserInfo` that stores and manages user information.
-
-Features:
-- Private fields for name, age, email, and account status
-- Public getters and setters
-- Constructor with full parameter initialization
-- `DisplayInfo()` method for neatly printing user details
-
-Sample Output:
-
-User info:
-Name: Abdulaziz
-Age: 21
-Email: Abdulazizaisari06@gmail.com
-Active / Not Active: true
-
+## How to Run
+1. Compile the project using the provided `compile.bat`
+2. Run the program and observe output in console
 
 ---
 
-## 💼 Task 2: Payroll Calculator
-
-A flexible payroll system that calculates weekly pay for different employee types with validation, overtime, and tax deduction logic.
-
-### Supported Employee Types:
-- `FULL_TIME`: Normal pay up to 40 hrs, 1.5x for overtime
-- `PART_TIME`: Valid only up to 25 hrs
-- `CONTRACTOR`: Fixed flat rate
-- `INTERN`: Paid 80% of hourly rate, up to 20 hrs
-
-### Additional:
-- Includes a `calculateTaxDeduction()` method:
-  - Tax brackets: 10% – 25%
-  - Option to deduct $50 if the employee has health insurance
-
----
-
-## 🧪 How to Run
-
-1. Compile all `.java` files:
-
-   ```bash
-   ./compile.bat
-command:
-java -cp out Main
---------------------------------------------------------------
-
-Project Structure:
-
-├── src/
-│   ├── Main.java
-│   ├── UserInfo.java
-│   └── PayrollCalculator.java
-├── compile.bat
-├── .gitignore
-└── README.md
-
+Made by Abdulaziz Aisari.
