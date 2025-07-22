@@ -8,6 +8,9 @@ public class Main {
 		user1.displayInfo();
 		user2.displayInfo();
 		user3.displayInfo();
-
+		
+	double pay = PayrollCalculator.calculateWeeklyPay("FULL_TIME", 45, 20);
+	System.out.println("Pay: $" + pay);
 	}
+	
 }
