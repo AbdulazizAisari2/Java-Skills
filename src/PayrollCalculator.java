@@ -6,16 +6,18 @@ public class PayrollCalculator {
         }
 
         double totalPay = 0;
-        String type = employeeType.toUpperCase();
-
-        if (type.equals("FULL_TIME")) {
-            if (hoursWorked <= 40) {
-                totalPay = hoursWorked * hourlyRate;
-            } else {
-                double overtime = hoursWorked - 40;
-                totalPay = (40 * hourlyRate) + (overtime * hourlyRate * 1.5);
-            }
-        }
+		
+		switch (employeeType.toUpperCase()){
+			case "FULL_TIME":
+			     if (hoursWorked <= 40) {
+                    totalPay = hoursWorked * hourlyRate;
+                } else {
+                    double overtime = hoursWorked - 40;
+                    totalPay = (40 * hourlyRate) + (overtime * hourlyRate * 1.5);
+                }
+                break; 
+		}
+			
 
         return totalPay;
     }
