@@ -46,4 +46,28 @@ public class PayrollCalculator {
 	
 	
 	}
+	
+	public static double calculateTaxDeduction(double grossPay, boolean hasHealthInsurance) {
+		double taxRate;
+
+		if (grossPay <= 500) {
+			taxRate = 0.10;
+		} else if (grossPay <= 1000) {
+			taxRate = 0.15;
+		} else if (grossPay <= 2000) {
+			taxRate = 0.20;
+		} else {
+			taxRate = 0.25;
+		}
+
+		double tax = grossPay * taxRate;
+
+		if (hasHealthInsurance) {
+			tax -= 50;
+		}
+
+		return tax;
+	}
+
+
 }
